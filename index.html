@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            background: #f3f3f3;
+            flex-direction: column;
+            margin: 0;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 30px 50px;
+            transition: transform 0.2s;
+            text-align: center;
+            gap: 50px;
+        }
+        .sub img{
+            position: relative;
+            height: 250px;
+            width: 200px;
+            border-radius: 15px;
+        }
+        .sub h1{
+            position: absolute;
+            margin: 0%;
+            padding: 0px;
+        }
+        .sub{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function bt(){
+            window.location.href = `./Bank Transaction/index.html?`;
+        }
+        function sf(){
+            window.location.href = `./Shopping(filter)/index.html?`;
+        }
+        function ap(){
+            window.location.href = `./API/index.html?`;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="sub" onclick="bt()"><img src="" alt=""><h1>Bank<br>Transaction</h1></div>
+        <div class="sub" onclick="sf()" ><img src="" alt=""><h1>Shopping <br>(Filter)</h1></div>
+        <div class="sub" onclick="ap()" ><img src="" alt=""><h1>API Calling <br>using(JS)</h1></div>
+        <a href=""></a>
+        
+    </div>
+</body>
+</html>

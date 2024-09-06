@@ -1,0 +1,30 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+body{
+    background: lightskyblue;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    padding: 2px;
+    background-color: rgba(119, 136, 153, 0.404);
+    height: 300px;
+    width: 250px;
+    border-radius: 5%;
+    box-shadow: -10px -10px 20px#f0eef579,10px 10px 20px #565252;  
+}
+.box img{
+    width: 150px;
+}

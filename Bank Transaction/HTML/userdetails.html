@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BusinessBank / AccountDetails</title>
+  <link rel="stylesheet" href="../CSS/userdetails.css">
+  <script src="../JAVA SCRIPT/index.js"></script>
+</head>
+
+<body onload="welcome()">
+
+  <div class="main" >
+    <h3><u>Business Bank</u></h3>
+    <h1>My Account Details</h1>
+    <div class="details">
+        <label > User Name :  </label> <h4 id="z1">sriram</h4>
+        <label > Savings:     </label> <h4 id="z2" onload="savings()">300/-</h4>
+        <label > Deposits:    </label> <h4 id="z3">0/-</h4>
+        <label > Credit Loan: </label> <h4 id="z4" onload="cloan()">-3000/-</h4>
+    </div>
+    <div class="buttonchild">
+    <button type="submit" onclick="methods()">Click For Payment</button> 
+    <button type="submit" onclick="back()"> Back</button> 
+    </div>
+    <p>Click Here to -  <a href="../index.html" style="text-decoration: none; color: #dd0e0e;"> Log-out </a> </p>   
+  </div>
+  
+</body>
+</html>
