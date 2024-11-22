@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hover Effect</title>
     <style>
         body {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            line-height: 1;
             min-height: 100vh;
             background: #f3f3f3;
             flex-direction: column;
             margin: 0;
+        }
+        .title h1{
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: 1000px;
         }
         .main {
             display: flex;
@@ -27,45 +33,102 @@
             text-align: center;
             gap: 50px;
         }
-        .sub img{
+        .sub {
             position: relative;
-            height: 250px;
-            width: 200px;
-            border-radius: 15px;
-        }
-        .sub h1{
-            position: absolute;
-            margin: 0%;
-            padding: 0px;
-        }
-        .sub{
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(154, 31, 31, 0.2);
+            transition: transform 0.3s, filter 0.3s;
+            cursor: pointer;
         }
+        .sub img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: filter 0.3s;
+        }
+        .sub h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .sub:hover img {
+            filter: blur(5px);
+        }
+        .sub:hover h1 {
+            opacity: 1;
+        }
+
+        .btnn{
+            margin-top: 20px;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            width: 40%;
+        }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #ff6666;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: hsl(350, 85%, 46%);
+    }
     </style>
+</head>
+<body>
+    <div class="title"><h1>Java Script Works</h1></div>
+    <div class="main">
+        <div class="sub" onclick="bt()">
+            <img src="./img/bank.jpg" alt="">
+            <h1 style="color:rgb(0, 0, 0);">Bank<br>Transaction</h1>
+        </div>
+        <div class="sub" onclick="sf()">
+            <img src="./img/filter.jpg" alt="">
+            <h1>Shopping <br>(Filter)</h1>
+        </div>
+        <div class="sub" onclick="ap()">
+            <img src="./img/api.jpg" alt="">
+            <h1>API Calling <br>using(JS)</h1>
+        </div>
+    </div>
+    <div class="btnn"><button id="backButton">Back</button></div>
     <script>
-        function bt(){
+        function bt() {
             window.location.href = `./Bank Transaction/index.html?`;
         }
-        function sf(){
+        function sf() {
             window.location.href = `./Shopping(filter)/index.html?`;
         }
-        function ap(){
+        function ap() {
             window.location.href = `./API/index.html?`;
         }
 
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('backButton').addEventListener('click', function() {
+                window.location.href = 'https://igsriram.github.io/portfolio/';
+            });
+        });
     </script>
-</head>
-<body>
-    <div class="main">
-        <div class="sub" onclick="bt()"><img src="" alt=""><h1>Bank<br>Transaction</h1></div>
-        <div class="sub" onclick="sf()" ><img src="" alt=""><h1>Shopping <br>(Filter)</h1></div>
-        <div class="sub" onclick="ap()" ><img src="" alt=""><h1>API Calling <br>using(JS)</h1></div>
-        <a href=""></a>
-        
-    </div>
 </body>
 </html>
